@@ -27,6 +27,7 @@
 .options h2{
   font-size: 7rem;
   font-family: 'Charm', cursive;
+  cursor: pointer;
   font-weight: 600;
   color: var(--text-color);
   margin-bottom: -3rem;
