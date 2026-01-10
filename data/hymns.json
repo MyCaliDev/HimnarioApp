@@ -1,0 +1,65 @@
+[
+    {
+        "id": 1,
+        "titulo": "CADA MOMENTO LA VIDA ME DA",
+        "partes": [
+            {
+                "tipo": "estrofa",
+                "label": "1",
+                "texto": "Cristo me ayuda por Él a vivir, Cristo me ayuda por Él a morir, Hasta que llegue su reino a ver, ¡Cada momento le entrego mi ser!"
+            },
+            {
+                "tipo": "coro",
+                "label": "CORO",
+                "texto": "Cada momento la vida me da, Cada momento conmigo Él está; Hasta que llegue su reino a ver, ¡Cada momento le entrego mi ser!"
+            },
+            {
+                "tipo": "estrofa",
+                "label": "2",
+                "texto": "Siento pesares, muy cerca Él está, Siento dolores, alivio me da, Tengo aflicciones, me muestra su amor, ¡Cada momento me cuidas, Señor!"
+            },
+            {
+                "tipo": "estrofa",
+                "label": "3",
+                "texto": "Tengo amarguras o tengo temor, Tengo tristezas, me inspiras valor, Tengo conflicto o penas aquí, ¡Cada momento te acuerdas de mí!"
+            },
+            {
+                "tipo": "estrofa",
+                "label": "4",
+                "texto": "Tengo flaquezas o débil estoy, Cristo me dice: 'Tu amparo yo soy'; Cada momento, en tinieblas o en luz, ¡Siempre conmigo está mi Jesús!"
+            }
+        ]
+    },
+    {
+        "id": 2,
+        "titulo": "POR FE CONTEMPLO REDENCIÓN",
+        "partes": [
+            {
+                "tipo": "estrofa",
+                "label": "1",
+                "texto": "Por fe contemplo redención, La fuente carmesí; Jesús nos da la salvación, Su vida dió por mí."
+            },
+            {
+                "tipo": "coro",
+                "label": "CORO",
+                "texto": "La fuente sin igual hallé, De vida y luz el manantial; ¡oh, gloria a Dios, me limpia a mí, Me limpia a mí, me limpia a mí."
+            },
+            {
+                "tipo": "estrofa",
+                "label": "2",
+                "texto": "Mi vida entrego a mi Jesús, Las dudas Él quitó; Mi alma goza de su luz, Mis deudas Él pagó."
+            },
+            {
+                "tipo": "estrofa",
+                "label": "3",
+                "texto": "Cuán inefable gozo es, Saber que salvo soy; Mi Rey aquí es mi Jesús, Al reino sé que voy."
+            },
+            {
+                "tipo": "estrofa",
+                "label": "4",
+                "texto": "¡Oh, gracia excelsa de mi Dios, Profundo es el amor; De mi Jesús vía de luz, Cordero redentor."
+            }
+        ]
+    }
+    
+]

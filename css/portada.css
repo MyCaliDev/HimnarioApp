@@ -30,7 +30,7 @@
   cursor: pointer;
   font-weight: 600;
   color: var(--text-color);
-  margin-bottom: -3rem;
+  margin-bottom: -2rem;
   color: var(--main-color);
 }
 .options p{
@@ -58,8 +58,12 @@
   padding-top: 2rem;
 }
 .span-container span {
-  font-size: 1.5rem;
+  font-size: 2rem;
   font-weight: 500;
+}
+.span-container .services {
+  color: #C70039;
+  text-shadow: 2px 2px 4px #000;
 }
 .blessing-1 {
   opacity: 0;

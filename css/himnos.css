@@ -1,4 +1,4 @@
-.resultContainer{
+.hymnsContainer{
   width: 100%;
   position: relative;
   display: flex;
@@ -7,39 +7,30 @@
   padding-bottom: 8rem;
   background: var(--fondo);
 }
-.result{
+.hymnObtained{
   width: 40rem;
   display: block;
   text-align: center;
   z-index: 1;
 }
-.result p{
+.hymnObtained p{
   color: var(--text-color);
-  font-size: 2rem;
+  font-size: var(--hymn-text-size);
   line-height: 2.2;
 
 }
-.result .tituloletra{
+.hymnObtained .hymnTitle{
   color: var(--main-color);
-  font-size: 2.3rem;
+  font-size: var(--hymn-title-size);
   font-weight: 400;
   padding-bottom: 2rem;
 }
-.result .separators{
+.hymnObtained .separators{
   color:var(--main-color);
-  font-size: 2.3rem;
+  font-size: var(--hymn-separator-size);
 }
 @media (max-width: 400px){
-  .result{
+  .hymnObtained{
     width: 90%;
-  }
-  .result p{
-    font-size: 2.5rem;
-  }
-  .result .tituloletra{
-    font-size: 2.8rem;
-  }
-  .result .separators{
-    font-size: 2.4rem;
   }
 }

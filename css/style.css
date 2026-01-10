@@ -26,6 +26,11 @@
   --navfoot2: rgba(0, 0, 0, .88);
   --textaddress: #c0d1dc;
   --blessing: #5DADE2;
+
+  --hymn-scale: 1;
+  --hymn-title-size: calc(2.3rem * var(--hymn-scale));
+  --hymn-separator-size: calc(2.3rem * var(--hymn-scale));
+  --hymn-text-size: calc(2.2rem * var(--hymn-scale));
 }
 .dark-mode{
   --bg-color: #fdfdfd;
@@ -47,7 +52,6 @@ html{
 }
 body{
   background: var(--bg-color);
-  touch-action: manipulation;
   -webkit-user-select: none;
   user-select: none;
 }
@@ -151,7 +155,7 @@ html, body {
   font-family: 'Charm', cursive;
   font-weight: 600;
   color: var(--text-color);
-  margin-bottom: -3rem;
+  margin-bottom: -2rem;
   color: var(--main-color);
 }
 .options p{
@@ -191,13 +195,16 @@ html, body {
   background: var(--navfoot);
   backdrop-filter: blur(50px); 
   border-top: 0.2px solid var(--border-color);
+  color: var(--text-color);
+  font-size: 1.6rem;
   z-index: 3;
 }
-.footer span{
+.footer .date{
   font-size: 1.6rem;
   color: var(--text-color);
-  padding-right: 1rem;
+  margin-right: 0.6rem;
 }
+
 #footerText p{
   display: none;
   opacity: 0;
@@ -361,5 +368,12 @@ a .bx{
 @media only screen and (min-width: 700px) and (min-height: 1100px) {
   .content{
     padding-top: 35rem;
+  }
+}
+
+@media (pointer: coarse) {
+  body {
+    touch-action: manipulation;
+    overscroll-behavior: none;
   }
 }

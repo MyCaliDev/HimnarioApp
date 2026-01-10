@@ -68,30 +68,52 @@ document.addEventListener('DOMContentLoaded', function () {
   setInterval(toggleText, 5000);
 });
 
-/*================= Filtro de búsqueda =================*/
-function filtrarLista() {
-  var input = document.getElementById("buscar_himno").value.toLowerCase();
-  var listaElementos = document.getElementById("himnos");
-  var elementos = listaElementos.getElementsByTagName("a");
+/* Footer */
+document.getElementById("year").textContent = new Date().getFullYear();
 
-  // Mostrar u ocultar elementos según el filtro
-  for (var i = 0; i < elementos.length; i++) {
-    var textoElemento = elementos[i].textContent.toLowerCase();
-    if (textoElemento.includes(input)) {
-      elementos[i].style.display = "";
-    } else {
-      elementos[i].style.display = "none";
-    }
-  }
+/*================= Filtro de búsqueda =================*/
+const inputBuscar = document.getElementById('buscar_himno');
+const contenedorHimnos = document.getElementById('himnos');
+
+let listaHimnos = [];
+
+fetch('data/hymns.json')
+  .then(res => res.json())
+  .then(data => {
+    listaHimnos = data;
+    renderLista(listaHimnos);
+  })
+  .catch(() => {
+    contenedorHimnos.innerHTML = '<p>Error al cargar himnos</p>';
+  });
+
+function renderLista(himnos) {
+  contenedorHimnos.innerHTML = '';
+
+  himnos.forEach(himno => {
+    const link = document.createElement('a');
+    link.className = 'himno_content';
+    link.href = `hymns.html?hymn=${himno.id}`;
+    link.innerText = `${himno.id} - ${himno.titulo}`;
+
+    contenedorHimnos.appendChild(link);
+  });
 }
 
+inputBuscar.addEventListener('input', () => {
+  const texto = inputBuscar.value.toLowerCase();
+
+  const filtrados = listaHimnos.filter(himno =>
+    himno.titulo.toLowerCase().includes(texto) ||
+    himno.id.toString().includes(texto)
+  );
+
+  renderLista(filtrados);
+});
+
 function limpiarBusqueda() {
-  document.getElementById("buscar_himno").value = '';
-  var listaElementos = document.getElementById("himnos");
-  var elementos = listaElementos.getElementsByTagName("a");
-  for (var i = 0; i < elementos.length; i++) {
-    elementos[i].style.display = "";
-  }
+  inputBuscar.value = '';
+  renderLista(listaHimnos);
 }
 
 document.addEventListener('DOMContentLoaded', limpiarBusqueda);

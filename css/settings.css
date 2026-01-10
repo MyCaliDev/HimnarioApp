@@ -1,0 +1,76 @@
+.settings {
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    padding-top: 10rem;
+    padding-bottom: 8rem;
+    background: var(--fondo);
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+.settings h2 {
+    font-size: 2.2rem;
+    margin-bottom: 2rem;
+    color: var(--text-color);
+    font-weight: 200;
+}
+
+.preview {
+    width: 90%;
+    max-width: 600px;
+    min-height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 3rem;
+    border: 1px dashed var(--border-color);
+    color:var(--main-color);
+    border-radius: 10px;
+    padding: 1rem;
+    background-color: rgba(105, 105, 105, 0.1);
+    transition: font-size 0.2s ease;
+}
+
+.preview p {
+    margin: 0;
+    text-align: center;
+    font-size: var(--hymn-text-size);
+    transition: font-size 0.2s ease;
+}
+
+.font-control {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.font-control button {
+    background-color: #0278c6;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    padding: 0.7rem 1.2rem;
+    font-size: 1.5rem;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.font-control button:hover {
+    background-color: #0263a3;
+}
+
+.font-control button:disabled {
+    background-color: #aaa;
+    cursor: not-allowed;
+}
+
+.font-control #fontValue {
+    font-size: 1.4rem;
+    min-width: 50px;
+    color: var(--text-color);
+    text-align: center;
+}

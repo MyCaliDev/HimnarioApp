@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
   <link rel="stylesheet" href="./css/boxicons.min.css">
   <link rel="stylesheet" href="./css/style.css">
   <link rel="stylesheet" href="./css/portada.css">
@@ -29,7 +29,9 @@
 
     <nav class="navbar">
       <a href="./portada.html" class="active">Casa de Oración</a>
-      <a href="https://github.com/MaycolCali" target="_blank"><i class="bx bxl-github"></i>GitHub</a>
+      <a href="./categories.html">Categorías</a>
+      <a href="./settings.html">Configuración</a>
+      <a href="https://github.com/MyCaliDev" target="_blank"><i class="bx bxl-github"></i>GitHub</a>
     </nav>
 
     <div class="bx bx-sun" id="darkMode-icon"></div>
@@ -42,13 +44,12 @@
         <h2>Casa de Oración</h2>
         <p>Iglesia de Dios</p>
         <div class="address">
-          <span>2 avenida 2-26 zona 3</span>
-          <span>San Juan Comalapa</span>
+          <span>2 Av. 2-26, zona 3, Comalapa</span>
         </div>
         <div class="span-container">
           <span>Horarios de servicio:</span>
-          <span>Viernes: 18:00 horas</span>
-          <span>Sabados: 09:30 horas y 14:30 horas</span>
+          <span class="services">Viernes: 18:00 horas</span>
+          <span class="services">Sabados: 09:30 horas y 14:30 horas</span>
         </div>
         <div id="blessings">
           <p class="blessing-1 show" id="blessing1">Jehová te bendiga, y te guarde;</p>
@@ -61,12 +62,14 @@
     </div>
   </section>
   <footer class="footer">
-    <span>© 2026.</span>
+    <span class="date">©</span>
+    <span id="year"></span>
+    <span class="date">.</span>
     <div id="footerText">
       <p id="firstText">Crafteado con el 💙 por MyCali.</p>
       <p id="secondText">Hecho con 😴 en la pandemia 🦠.</p>
     </div>
-    <a href="https://github.com/MaycolCali" target="_blank"><i class="bx bxl-github"></i></a>
+    <a href="https://github.com/MyCaliDev" target="_blank"><i class="bx bxl-github"></i></a>
   </footer>
 
   <!-- typed multiple text -->
