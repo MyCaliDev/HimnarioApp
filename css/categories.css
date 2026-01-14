@@ -40,7 +40,7 @@
     font-weight: 500;
     color: var(--main-color);
     font-size: 1.8rem;
-    border-bottom: 1px solid var(--text-color);
+    border-bottom: 3px solid var(--border-color);
 }
 
 .himno_content {

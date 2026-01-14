@@ -2,10 +2,32 @@
 let menuIcon = document.querySelector('#menu-icon');
 let navbar = document.querySelector('.navbar');
 
+function cerrarMenu() {
+  menuIcon.classList.remove('bx-x');
+  navbar.classList.remove('active');
+}
+
 menuIcon.onclick = () => {
   menuIcon.classList.toggle('bx-x');
   navbar.classList.toggle('active');
-}
+};
+
+document.querySelectorAll('.navbar a').forEach(link => {
+  link.addEventListener('click', cerrarMenu);
+});
+
+document.addEventListener('click', (e) => {
+  if (
+    navbar.classList.contains('active') &&
+    !navbar.contains(e.target) &&
+    !menuIcon.contains(e.target)
+  ) {
+    cerrarMenu();
+  }
+});
+
+window.addEventListener('popstate', cerrarMenu);
+window.addEventListener('pageshow', cerrarMenu);
 
 /*================= dark light mode =================*/
 const darkModeIcon = document.querySelector('#darkMode-icon');
