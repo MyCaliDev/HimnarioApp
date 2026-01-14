@@ -67,12 +67,15 @@ self.addEventListener('activate', e => {
 
 self.addEventListener('fetch', e => {
   e.respondWith(
-    caches.match(e.request)
-      .then(res => {
-        if (res) {
-          return res
+    caches.match(e.request).then(res => {
+      if (res) {
+        return res;
+      }
+      return fetch(e.request).catch(() => {
+        if (e.request.url.includes('hymns.json')) {
+          return caches.match('./data/hymns.json');
         }
-        return fetch(e.request)
       })
+    })
   )
 })

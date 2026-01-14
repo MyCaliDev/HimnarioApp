@@ -4,7 +4,7 @@ const selectCategorias = document.getElementById('categoryFilter');
 let himnosGlobal = [];
 let categoriasGlobal = {};
 
-fetch('data/hymns.json')
+fetch('./data/hymns.json')
     .then(res => res.json())
     .then(himnos => {
         himnosGlobal = himnos;

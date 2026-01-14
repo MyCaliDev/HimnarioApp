@@ -103,7 +103,7 @@ const contenedorHimnos = document.getElementById('himnos');
 
 let listaHimnos = [];
 
-fetch('data/hymns.json')
+fetch('./data/hymns.json')
   .then(res => res.json())
   .then(data => {
     listaHimnos = data;

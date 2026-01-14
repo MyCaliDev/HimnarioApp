@@ -9,7 +9,7 @@ const hymnNumber = parseInt(params.get('hymn'), 10);
 if (!hymnNumber) {
     resultContainer.innerHTML = '<p>Himno no válido</p>';
 } else {
-    fetch('data/hymns.json')
+    fetch('./data/hymns.json')
         .then(res => res.json())
         .then(hymns => {
             const hymn = hymns.find(h => h.id === hymnNumber);
