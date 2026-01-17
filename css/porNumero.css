@@ -85,6 +85,9 @@ button:hover {
 .btn-delete {
   font-size: 3rem;
 }
+.btn-number .btn-delete .btn-search {
+  -webkit-tap-highlight-color: transparent;
+}
 .calculator #display {
   color: var(--text-color);
 }
