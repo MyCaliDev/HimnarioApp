@@ -383,7 +383,7 @@ a .bx{
 }
 
 @media (pointer: coarse) {
-  body {
+  .body_general {
     touch-action: manipulation;
     overscroll-behavior: none;
   }
