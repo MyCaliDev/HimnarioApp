@@ -55,15 +55,18 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding-top: 2rem;
+  padding-top: 3rem;
 }
 .span-container span {
   font-size: 2rem;
   font-weight: 500;
 }
 .span-container .services {
-  color: #C70039;
-  text-shadow: 2px 2px 4px #000;
+  color: var(--services);
+  text-shadow: 2px 2px 4px var(--shadow-color);
+}
+.span-container span:nth-of-type(2) {
+  padding-top: 2rem;
 }
 .blessing-1 {
   opacity: 0;

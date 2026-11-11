@@ -36,5 +36,6 @@ function limpiarBusqueda() {
   display.innerText = '';
 }
 
-window.addEventListener('load', limpiarBusqueda);
-window.addEventListener('beforeunload', limpiarBusqueda);
+// También se ejecutan al restaurar la página desde la caché de navegación de iOS.
+window.addEventListener('pageshow', limpiarBusqueda);
+window.addEventListener('pagehide', limpiarBusqueda);
