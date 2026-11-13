@@ -13,6 +13,7 @@
   outline: solid #f00 1px !important;*/
 }
 :root{
+  color-scheme: dark;
   --bg-color: #000;
   --text-color: #fdfdfd;
   --shadow-color: rgba(7, 7, 7, 0.9);
@@ -34,6 +35,7 @@
   --hymn-text-size: calc(2.2rem * var(--hymn-scale));
 }
 .dark-mode{
+  color-scheme: light;
   --bg-color: #fdfdfd;
   --text-color: #101010;
   --shadow-color: rgba(0,0,0,.2);
@@ -49,6 +51,7 @@
   --services: #C70039;
 }
 html{
+  background: var(--bg-color);
   font-size: 62.5%;
   overflow-x: hidden;
 }

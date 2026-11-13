@@ -75,8 +75,17 @@ button {
   transition: all 200ms ease;
 }
 
-button:hover {
-  transform: scale(1.1);
+@media (hover: hover) and (pointer: fine) {
+  button:hover {
+    transform: scale(1.1);
+  }
+}
+.calculator button:active {
+  transform: scale(0.95);
+}
+.calculator button:focus-visible {
+  outline: 2px solid var(--main-color);
+  outline-offset: 3px;
 }
 .btn-search {
   font-size: 2.5rem;
@@ -85,7 +94,7 @@ button:hover {
 .btn-delete {
   font-size: 3rem;
 }
-.btn-number .btn-delete .btn-search {
+.calculator {
   -webkit-tap-highlight-color: transparent;
 }
 .calculator #display {

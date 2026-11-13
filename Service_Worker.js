@@ -1,4 +1,4 @@
-const CACHE_NAME = 'HimnarioApp-v3',
+const CACHE_NAME = 'HimnarioApp-v4',
   urlsToCache = [
     './',
     './index.html',
@@ -12,6 +12,7 @@ const CACHE_NAME = 'HimnarioApp-v3',
     './css/settings.css',
 
     './js/script.js',
+    './js/theme.js',
     './js/number.js',
     './js/hymn-view.js',
     './js/categories.js',
