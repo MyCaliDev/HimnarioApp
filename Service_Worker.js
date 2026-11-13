@@ -1,4 +1,4 @@
-const CACHE_NAME = 'HimnarioApp-v2',
+const CACHE_NAME = 'HimnarioApp-v3',
   urlsToCache = [
     './',
     './index.html',

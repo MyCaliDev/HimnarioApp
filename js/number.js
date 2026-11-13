@@ -24,7 +24,13 @@ function searchHimno() {
     return;
   }
 
-  window.location.href = `hymns.html?hymn=${himnoNumber}`;
+  limpiarBusqueda();
+
+  requestAnimationFrame(() => {
+    requestAnimationFrame(() => {
+      window.location.href = `hymns.html?hymn=${himnoNumber}`;
+    });
+  });
 }
 
 function updateDisplay() {
@@ -36,6 +42,5 @@ function limpiarBusqueda() {
   display.innerText = '';
 }
 
-// También se ejecutan al restaurar la página desde la caché de navegación de iOS.
 window.addEventListener('pageshow', limpiarBusqueda);
 window.addEventListener('pagehide', limpiarBusqueda);
