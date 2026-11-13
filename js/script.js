@@ -34,8 +34,7 @@ const darkModeIcon = document.querySelector('#darkMode-icon');
 
 // Función para activar o desactivar el modo oscuro
 function toggleDarkMode() {
-  const isDarkMode = !document.documentElement.classList.contains('dark-mode');
-  applyAppTheme(isDarkMode);
+  const isDarkMode = document.body.classList.toggle('dark-mode');
   darkModeIcon.classList.toggle('bx-sun', isDarkMode);
   darkModeIcon.classList.toggle('bx-moon', !isDarkMode);
   // Guardar la preferencia en localStorage
@@ -46,11 +45,11 @@ function toggleDarkMode() {
 function loadDarkModePreference() {
   const darkMode = localStorage.getItem('darkMode');
   if (darkMode === 'enabled') {
-    applyAppTheme(true);
+    document.body.classList.add('dark-mode');
     darkModeIcon.classList.add('bx-sun');
     darkModeIcon.classList.remove('bx-moon');
   } else {
-    applyAppTheme(false);
+    document.body.classList.remove('dark-mode');
     darkModeIcon.classList.add('bx-moon');
     darkModeIcon.classList.remove('bx-sun');
   }
